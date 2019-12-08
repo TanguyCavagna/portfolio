@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#warning {
+    display: none;
+}
+
+/* ------------- HOME ------------- */
+#home {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(255, 255, 255,0) 0%, #eae7e1 100%), url('./img/pawan-bg.png');
+}
+
+#home h1 {
+    position: absolute;
+    color: #fff;
+    font-size: 10rem;
+    top: 350px;
+    left: 550px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#home svg:not(#container) {
+    width: 100%;
+    position: absolute;
+    left: 770px;
+    transform: translate(-50%, -50%);
+}
+
+#home #container {
+    position: absolute;
+    width: 1920px;
+    top: 0;
+}
+
+#home svg:nth-child(3) {
+    top: 50%;
+}
+
+#home svg:nth-child(4) {
+    top: 65%;
+}
+
+#home svg:nth-child(5) {
+    top: 80%;
+}
+
+.text--line {
+    font-size: 6rem;
+    font-weight: 600;
+    stroke-width: 2px;
+}
+
+#outline-design, #outline-develop, #outline-create {
+    fill: none;
+    stroke: rgb(32, 35, 48);
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    animation: outline 2.5s ease-in forwards 6s;
+}
+
+#fill-design, #fill-develop, #fill-create {
+    fill-opacity: 0;
+    fill: rgb(32, 35, 48);
+    animation: fill .5s ease-in forwards 7s;
+}
+
+@keyframes outline {
+    from {
+        stroke-dashoffset: 100%;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill-opacity: 0;
+    }
+
+    to {
+        fill-opacity: 1;
+    }
+}
+/* ------------- END HOME ------------- */
+
+/* ------------- ABOUT ------------- */
+#about {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #eae7e1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#about div {
+    width: 50%;
+    height: 100vh;
+}
+
+#about #about-text, #about #portrait {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#about #about-text #text {
+    position: absolute;
+    left: 10%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+#about #about-text #text h2 {
+    color: #ca7532;
+    font-size: 2rem;
+    background-color: #eae7e1;
+}
+
+#about #about-text #text p {
+    background-color: #eae7e1;
+    font-size: 1.1rem;
+    padding: 10px 0 10px 0;
+    letter-spacing: 5px;
+}
+
+#about #portrait img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+
+#about #social {
+    position: absolute;
+    top: 0;
+    left: 95%;
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+#about #social h3 {
+    transform: rotate(90deg);
+    font-weight: lighter;
+    letter-spacing: 5px;
+}
+
+#about #social h3 a {
+    padding: 2px;
+    text-decoration: none;
+    color: #000;
+    border: solid 1px #eae7e1;
+    transition: .5s;
+}
+
+#about #social h3 a:hover {
+    border: solid 1px #000;
+}
+
+/* ------------- END ABOUT ------------- */
+
+/* ------------- SERVICES ------------- */
+#services {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    background-image: url('./img/services1.png');
+}
+
+/* ------------- END SERVICES ------------- */
+
+/* ------------- PROJECTS ------------- */
+#projects {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#projects span, #projects #spacer div span {
+    position: absolute;
+    font-size: 5rem;
+    text-transform: uppercase;
+    top: 7%;
+    left: 10%;
+}
+
+#project span {
+    color: rgb(32, 35, 48);
+}
+
+#projects #spacer {
+    width: 100%;
+    height: 60%;
+    z-index: 2;
+}
+
+#projects #spacer div {
+    position: relative;
+    overflow: hidden;
+}
+
+#projects #spacer div span {
+    color: #eae7e1; /* #eae7e1;*/
+    top: -15.5%;
+}
+
+#projects #spacer div {
+    height: 80%;
+    margin-top: 5%;
+    width: 100%;
+    background-color: rgb(87, 186, 153);
+}
+
+/* ------------- END PROJECTS ------------- */
+
+
+/* ------------- CONTACT ------------- */
+#contact {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#contact #quote {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    text-transform: uppercase;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact #quote div:first-child {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+#contact #quote div:last-child {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+#contact #email, #contact #resume {
+    position: relative;
+    width: 50%;
+    height: 25%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact #email span {
+    margin-left: 30px;
+    text-transform: none;
+}
+
+#contact #resume #download {
+    padding: 25px;
+    border: 1px solid rgb(32, 35, 48);
+    border-radius: 45px;
+    transition: .5s;
+}
+
+#contact #resume #download:hover {
+    cursor: pointer;
+    background-color: rgb(32, 35, 48);
+    color: #fff;
+}
+/* ------------- END CONTACT ------------- */
